@@ -59,11 +59,11 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
         z = np.dot(pos, weights) # compute perceptron output
         if z < 0: # positive example classified as negative
-            weights = weights + eta*weights.shape
+            weights = weights + eta*weights.shape # update weights (scalar times vector of matrix dimensions)
 
         z  = np.dot(neg, weights)
         if z >= 0: # negative example classified as positive
-            weights = weights - eta*weights.shape
+            weights = weights - eta*weights.shape # update weights (scalar times vector of matrix dimensions)
 
     return weights
 ```
