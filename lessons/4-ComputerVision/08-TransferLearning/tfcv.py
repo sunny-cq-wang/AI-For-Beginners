@@ -8,6 +8,8 @@ from PIL import Image
 import glob
 import os
 
+import zipfile
+
 def plot_convolution(data,t,title=''):
     fig, ax = plt.subplots(2,len(data)+1,figsize=(8,3))
     fig.suptitle(title,fontsize=16)
